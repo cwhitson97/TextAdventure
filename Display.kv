@@ -1,0 +1,32 @@
+<MenuScreen>:
+    canvas.before:
+        Color:
+            rgb: 128/255.0, 128/255.0, 128/255.0 ,1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    BoxLayout:
+        orientation: 'vertical'
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        size_hint: 0.5,0.3
+        Button:
+            font_size: 90
+            background_color: 0,0,0,0
+            color: 178/255.0, 34/255.0, 34/255.0 ,1
+            text: 'Play'
+            on_press:
+                root.manager.transition.duration = 1
+                root.manager.current = 'game'
+        Button:
+            font_size: 50
+            background_color: 0,0,0,0
+            color: 178/255.0, 34/255.0, 34/255.0 ,1
+            text: 'Exit'
+            on_press: app.stop()
+    Label:
+        text: 'Created by: Courtney Whitson'
+        color: 0,0,0,1
+        size_hint: 0.6, 0.1
+        pos_hint: {'center_x': 0.15, 'center_y': 0.05}
+
+

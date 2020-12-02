@@ -1,0 +1,28 @@
+<GameScreen>:
+    canvas:
+        Color:
+            rgb: 128/255.0, 128/255.0, 128/255.0 ,1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    RelativeLayout:
+        orientation: 'vertical'
+        pos: self.pos
+        size: root.size
+
+        TextInput:
+            id: Story
+            background_color: 0,0,0,0
+            read_only: True
+            pos_hint: {'center_x': 0.5, 'center_y': 0.4}
+            size_hint: 0.95, 0.4
+
+        TextInput:
+            id: Choices
+            background_color: 0,0,0,.5
+            hint_text:'Enter text'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            size_hint: 0.95, 0.1
+            multiline: False
+            on_focus: self.text = ""
